@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS with Facebook react</title>
+
+    <link rel="stylesheet" href="app/vendor/bootstrap/dist/css/bootstrap.css"/>
+
+    <style>
+        .user-list .user-item {
+            border-left: none;
+            border-right: none;
+        }
+        .user-list .user-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <script src="app/vendor/angular/angular.js"></script>
+    <script src="app/vendor/react/react.js"></script>
+
+    <script src="app/main.js"></script>
+
+</head>
+<body ng-app="app">
+    <div class="container" ng-controller="MainCtrl as main">
+
+        <div class="page-header">
+            <h1>A experiment with AngularJS and ReactJS</h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">AngularJS with ReactJS</div>
+            <div user-list data-users="users" data-user-selected="main.getUser(user)"></div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Just AngularJS</div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="user in users" ng-click="main.getUser(user)">
+                    {{ user.firstName }} - {{ user.lastName }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

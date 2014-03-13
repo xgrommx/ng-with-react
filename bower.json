@@ -1,0 +1,21 @@
+{
+  "name": "ng-with-react",
+  "version": "0.0.0",
+  "authors": [
+    "Denis Stoyanov <stoyanov.gr@email.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.14",
+    "react": "~0.9.0",
+    "bootstrap": "~3.1.1"
+  }
+}
